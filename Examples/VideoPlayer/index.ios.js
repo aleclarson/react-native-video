@@ -87,7 +87,7 @@ var VideoPlayer = React.createClass({
     return (
       <View style={styles.container}>
         <TouchableOpacity style={styles.fullScreen} onPress={() => {this.setState({paused: !this.state.paused})}}>
-          <Video source={{uri: "broadchurch"}}
+          <Video source={{uri: "http://www.sample-videos.com/video/mp4/720/big_buck_bunny_720p_1mb.mp4"}}
                  style={styles.fullScreen}
                  rate={this.state.rate}
                  paused={this.state.paused}

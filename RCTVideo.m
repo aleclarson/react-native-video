@@ -240,6 +240,7 @@ static NSString *const playbackLikelyToKeepUpKeyPath = @"playbackLikelyToKeepUp"
         [self attachListeners];
         [self applyModifiers];
       } else if(_playerItem.status == AVPlayerItemStatusFailed) {
+        NSLog(@"onVideoError");
         [_eventDispatcher sendInputEventWithName:@"onVideoError"
                                             body:@{@"error": @{
                                                        @"code": [NSNumber numberWithInteger: _playerItem.error.code],
